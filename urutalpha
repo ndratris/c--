@@ -1,0 +1,44 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <conio.h>
+#include <iostream.h>
+
+int tukar (a, b)
+int *a;
+int *b;
+{
+*a ^= *b;
+*b ^= *a;
+*a ^= *b;
+}
+
+int main (void)
+{
+
+register int i, j;
+int data[] = {'O','A','Z','I','L','P','Q','M','C','G','H','X','Y','F','D'};
+
+int n = 10;
+
+for (i = 1; i <n; i++){
+
+for (j = 0; j <n-i; j++){
+
+if( data[j]>data[j+1])
+
+tukar (&data[j],&data[j+1]);
+
+}
+}
+cout<<"\tSebelum Alphabet di  sort: \n";
+
+printf("\tO , A , Z , I , L , P , Q , M , C, G, H , X , Y , F, D\n");
+
+cout<<"\n\tHasil Setelah di sort\n\t";
+
+for(i = 0; i < n; i++)
+printf(" %c, ",data[i]);
+getch ();
+return 0;
+
+}
