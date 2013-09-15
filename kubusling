@@ -1,0 +1,99 @@
+//author: Hendra Trisnayadi
+//blog: doomplo.blogspot.com
+//license : free use 
+//program menghitung luas permukaan dan volume bangun ruang
+#include <iostream.h>
+#include <string.h>
+#include <stdlib.h>
+
+//kubus, balok, tabung,  bola
+const phi=3.14;
+double luas, volume;
+
+void main()
+{
+   double	sisi,
+   			panjang,
+            lebar,
+            tinggi,
+            jari;
+
+	char pilihan;
+   char quit;
+   quit='y';
+
+   while(quit=='y'||quit=='Y')
+   {
+   	system("cls");
+		cout<<"Program Penghitung Luas Permukaan dan Volume Bangun Ruang"<<endl;
+   	cout<<"Bangun Ruang:"<<endl;
+   	cout<<"a. Kubus"<<endl;
+   	cout<<"b. Balok"<<endl;
+   	cout<<"c. Tabung"<<endl;
+   	cout<<"d. Bola"<<endl;
+   	cout<<"Masukkan pilihan anda: ";
+   	cin>>pilihan;
+   	switch(pilihan)
+   	{
+   		case 'a':
+            cout<<"Masukkan panjang sisi kubus: ";
+            cin>>sisi;
+            luas=6*sisi*sisi;
+            volume=sisi*sisi*sisi;
+            cout<<"\nLuas Permukaan Kubus= 6 x Sisi x Sisi"<<endl;
+            cout<<"Luas Permukaan Kubus= "<<"6 x "<<sisi<<" x "<<sisi<<endl;
+            cout<<"Luas Permukaan Kubus= "<<luas<<"\n"<<endl;
+            cout<<"Volume Kubus= Sisi x Sisi x Sisi"<<endl;
+         	cout<<"Volume Kubus= "<<sisi<<" x "<<sisi<<" x "<<sisi<<endl;
+         	cout<<"Volume Kubus= "<<volume<<"\n"<<endl;
+         	break;
+      	case 'b':
+   			cout<<"Masukkan panjang balok: ";
+   			cin>>panjang;
+   			cout<<"Masukkan lebar balok: ";
+   			cin>>lebar;
+   			cout<<"Masukkan tinggi balok: ";
+            cin>>tinggi;
+   			luas=2*(panjang*lebar+panjang*tinggi+lebar*tinggi);
+   			volume=panjang*lebar*tinggi;
+   			cout<<"\nLuas Permukaan Balok= 2*(panjang*lebar+panjang*tinggi+lebar*tinggi)"<<endl;
+   			cout<<"Luas Permukaan Balok= "<<luas<<"\n"<<endl;
+   			cout<<"Volume Balok= Panjang x Lebar x Tinggi"<<endl;
+   			cout<<"Volume Balok= "<<panjang<<" x "<<lebar<<" x "<<tinggi<<endl;
+				cout<<"Volume Balok= "<<volume<<"\n"<<endl;
+         	break;
+      	case 'c':
+   			cout<<"Masukkan jari-jari tabung: ";
+   			cin>>jari;
+   			cout<<"Masukkan tinggi tabung: ";
+   			cin>>tinggi;
+   			luas=2*phi*jari*jari + 2*phi*jari*tinggi;
+   			volume=phi*jari*jari*tinggi;
+   			cout<<"\nLuas Permukaan Tabung= 2*phi*jari*jari + 2*phi*jari*tinggi;"<<endl;
+   			cout<<"Luas Permukaan Tabung= "<<luas<<"\n"<<endl;
+   			cout<<"Volume Tabung= phi x jari x jari x tinggi"<<endl;
+				cout<<"Volume Tabung= "<<volume<<"\n"<<endl;
+         	break;
+      	case 'd':
+   			cout<<"Masukkan jari-jari bola: ";
+   			cin>>jari;
+   			luas=4*phi*jari*jari;
+   			volume=(4/3)*phi*jari*jari*jari;
+   			cout<<"\nLuas Permukaan Bola= 4*phi*jari*jari;"<<endl;
+   			cout<<"Luas Permukaan Bola= "<<luas<<"\n"<<endl;
+   			cout<<"Volume Bola= (4/3)*phi*jari*jari*jari"<<endl;
+				cout<<"Volume Bola= "<<volume<<"\n"<<endl;
+         	break;
+   	}
+      cout<<"Ulangi?? (y/n) ";
+   	cin>>quit;
+      system("cls");
+   }
+
+   cout<<"Terima Kasih Telah Menggunakan Program Ini :)"<<endl;
+   cout<<"Semoga Praktikum Anda Menyenangkan :D"<<endl;
+   cout<<"Viva Elektro, Victory!"<<endl;
+   cout<<"Viva Elektro, Victory!"<<endl;
+   cout<<"Viva Elektro, Victory! Victory! Victory!!!"<<endl;
+   system("pause");
+}
